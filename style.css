@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap");
+
+:root {
+  /* Colors */
+
+  --color-primary-900: hsla(233, 53.7%, 16.1%, 1);
+  --color-primary-600: hsla(234, 24.9%, 52%, 1);
+  --color-primary-400: hsla(232, 10.2%, 55.9%, 1);
+  --color-secondary-800: hsla(341, 91.7%, 62.4%, 1);
+  --color-secondary-400: hsla(341, 100%, 82.7%, 1);
+  --color-neutral-100: hsla(0, 0%, 100%, 1);
+
+  /* Gradients */
+
+  --gradient-accent: linear-gradient(
+    to bottom,
+    hsla(13, 100%, 64.1%, 1) 0%,
+    hsla(322, 86.8%, 55.3%, 0.943) 100%
+  );
+  --gradient-primary: linear-gradient(
+    to bottom,
+    hsla(237, 100%, 64.1%, 0.281) 0%,
+    hsla(322, 86.8%, 55.3%, 0.943) 100%
+  );
+  --gradeint-background: linear-gradient(
+    to bottom,
+    var(--clr-white-100),
+    hsla(234, 100%, 97%, 1)
+  );
+  /* --clr-gradient-2-hover: hsla(0,0%,100%,0.500); */
+
+  /* Shadows */
+
+  --color-hsl-shadow: 233, 92%, 29%;
+  --shadow--s: 0 25 50 0 hsla(var(--color-hsl-shadow), 0.0442);
+  --shadow--l: 0 34 54 0 hsla(var(--color-hsl-shadow), 0.1589);
+
+  /* Font styles  */
+
+  --font-face-default: "Plus Jakarta Sans", sans-serif;
+
+  --font-weight--m: 500;
+  --font-weight--b: 700;
+  --font-weight--xb: 800;
+
+  /* Text sizes */
+
+  --heading--xl: 3.5rem;
+  --heading--l: 2.5rem;
+  --heading--m: 2rem;
+  --heading--s: 1.5rem;
+  --body--m: 1.12rem;
+  --body--s: 1rem;
+
+  /* Line heights */
+
+  --line-height--xl: 4.375rem;
+  --line-height--l: 3.1875rem;
+  --line-height--m: 2.5rem;
+  --line-height--s: 1.75rem;
+}
