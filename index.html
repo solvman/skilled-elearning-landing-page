@@ -1,52 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Skilled e-learning landing page</title>
-</head>
-<body>
-
-  Get Started
-
-  Maximize skill, minimize budget
-
-  Our modern courses across a range of in-demand skills will give you the 
-  knowledge you need to live the life you want.
-
-  Get Started
-
-  Check out our most popular courses!
-
-  Animation
-  Learn the latest animation techniques to create stunning motion 
-  design and captivate your audience.
-  Get Started
-
-  Design
-  Create beautiful, usable interfaces to help shape the future of 
-  how the web looks.
-  Get Started
-
-  Photography
-  Explore critical fundamentals like lighting, composition, and focus 
-  to capture exceptional photos.
-  Get Started
-
-  Crypto
-  All you need to know to get started investing in crypto. Go from beginner 
-  to advanced with this 54 hour course.
-  Get Started
-
-  Business
-  A step-by-step playbook to help you start, scale, and sustain your business 
-  without outside investment.
-  Get Started
-
-  Get Started
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Skilled e-learning landing page</title>
+  </head>
+  <body>
+    <header>
+      <div class="header content">
+        <img
+          src="./assets/logo-dark.svg"
+          alt="skilled logo"
+          class="header__logo"
+        />
+        <button class="button button--primary">Get Started</button>
+      </div>
+    </header>
+    <main>
+      <div class="content">
+        <section class="hero">
+          <h1 class="hero__title">Maximize skill, minimize budget</h1>
+          <p class="hero__body">
+            Our modern courses across a range of in-demand skills will give you
+            the knowledge you need to live the life you want.
+          </p>
+          <button class="button--secondary">Get Started</button>
+          <picture>
+            <img
+              src="./assets/image-hero-mobile.png"
+              alt="woman drinking coffee in front of laptop"
+              class="hero__img"
+            />
+          </picture>
+        </section>
+        <section class="tiles">
+          <div class="tile" data-variance="cta">
+            <p class="tile__heading">Check out our most popular courses!</p>
+          </div>
+          <div class="tile" data-variance="course" data-type="animation">
+            <p class="tile__heading">Animation</p>
+            <p class="tile__body">
+              Learn the latest animation techniques to create stunning motion
+              design and captivate your audience.
+            </p>
+            <p class="tile__link"><a href="#">Get Started</a></p>
+          </div>
+          <div class="tile" data-variance="course" data-type="design">
+            <p class="tile__heading">Design</p>
+            <p class="tile__body">
+              Create beautiful, usable interfaces to help shape the future of
+              how the web looks.
+            </p>
+            <p class="tile__link"><a href="#">Get Started</a></p>
+          </div>
+          <div class="tile" data-variance="course" data-type="photography">
+            <p class="tile__heading">Photography</p>
+            <p class="tile__body">
+              Explore critical fundamentals like lighting, composition, and
+              focus to capture exceptional photos.
+            </p>
+            <p class="tile__link"><a href="#">Get Started</a></p>
+          </div>
+          <div class="tile" data-variance="course" data-type="crypto">
+            <p class="tile__heading">Crypto</p>
+            <p class="tile__body">
+              All you need to know to get started investing in crypto. Go from
+              beginner to advanced with this 54 hour course.
+            </p>
+            <p class="tile__link"><a href="#">Get Started</a></p>
+          </div>
+          <div class="tile" data-variance="course" data-type="business">
+            <p class="tile__heading">Business</p>
+            <p class="tile__body">
+              A step-by-step playbook to help you start, scale, and sustain your
+              business without outside investment.
+            </p>
+            <p class="tile__link"><a href="#">Get Started</a></p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="content footer">
+        <img
+          src="./assets/logo-light.svg"
+          alt="light logo"
+          class="footer__logo"
+        />
+        <button class="button button--tertiary">Get Started</button>
+      </div>
+    </footer>
+  </body>
 </html>
