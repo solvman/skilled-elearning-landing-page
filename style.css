@@ -12,19 +12,19 @@
 
   /* Gradients */
 
-  --gradient-accent: linear-gradient(
-    to bottom,
-    hsla(13, 100%, 64.1%, 1) 0%,
-    hsla(322, 86.8%, 55.3%, 0.943) 100%
-  );
   --gradient-primary: linear-gradient(
     to bottom,
     hsla(237, 100%, 64.1%, 0.281) 0%,
     hsla(322, 86.8%, 55.3%, 0.943) 100%
   );
+  --gradient-secondary: linear-gradient(
+    to bottom,
+    hsla(13, 100%, 64.1%, 1) 0%,
+    hsla(322, 86.8%, 55.3%, 0.943) 100%
+  );
   --gradeint-background: linear-gradient(
     to bottom,
-    var(--clr-white-100),
+    var(--color-neutral-100),
     hsla(234, 100%, 97%, 1)
   );
   /* --clr-gradient-2-hover: hsla(0,0%,100%,0.500); */
@@ -49,7 +49,7 @@
   --heading--l: 2.5rem;
   --heading--m: 2rem;
   --heading--s: 1.5rem;
-  --body--m: 1.12rem;
+  --body--m: 1.125rem;
   --body--s: 1rem;
 
   /* Line heights */
@@ -58,6 +58,7 @@
   --line-height--l: 3.1875rem;
   --line-height--m: 2.5rem;
   --line-height--s: 1.75rem;
+  --line-height--xs: 1.625rem;
 }
 
 /* CSS Resets */
@@ -82,4 +83,45 @@ picture,
 svg {
   display: block;
   max-width: 100%;
+}
+
+/* Styles */
+
+body {
+  font-family: var(--font-face-default);
+  font-weight: var(--font-weight--m);
+  font-size: var(--body--s);
+  line-height: var(--line-height--xs);
+  color: var(--color-primary-400);
+  background-color: var(--color-neutral-100);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-secondary-800);
+  font-weight: var(--font-weight--b);
+  font-size: var(--body--m);
+  line-height: var(--line-height--s);
+  cursor: pointer;
+}
+
+.button {
+  color: var(--color-neutral-100);
+  font-size: var(--body--s);
+  font-weight: var(--font-weight--b);
+  border: none;
+  border-radius: 1.75rem;
+  padding: 0.615em 1.5em;
+}
+
+.button--primary {
+  background-color: var(--color-primary-900);
+}
+
+.button--secondary {
+  background-image: var(--gradient-secondary);
+}
+
+.button--tertiary {
+  background-image: var(--gradient-primary);
 }
