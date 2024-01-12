@@ -106,20 +106,40 @@ a {
 }
 
 .button {
+  position: relative;
   color: var(--color-neutral-100);
   font-size: var(--body--s);
   font-weight: var(--font-weight--b);
   border: none;
   border-radius: 1.75rem;
   padding: 0.615em 1.5em;
+  transition: all 0.4s;
+  cursor: pointer;
 }
 
 .button--primary {
   background-color: var(--color-primary-900);
 }
 
+.button--primary:is(:hover, :focus) {
+  background-color: var(--color-primary-600);
+}
+
 .button--secondary {
   background-image: var(--gradient-secondary);
+}
+
+.button--secondary:hover::before,
+.button--secondary:focus::before,
+.button--tertiary:hover::before,
+.button--tertiary:focus::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: hsla(0, 0%, 100%, 0.5);
 }
 
 .button--tertiary {
