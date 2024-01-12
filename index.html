@@ -9,6 +9,7 @@
       sizes="32x32"
       href="./assets/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Skilled e-learning landing page</title>
   </head>
   <body>
@@ -65,21 +66,20 @@
               type="image/webp"
             />
             <source
-              media="(min-width: 375px)"
-              srcset="
-                ./assets/image-hero-mobile.png    1x,
-                ./assets/image-hero-mobile@2x.png 2x
-              "
+              media="(min-resolution: 2dppx)"
+              srcset="./assets/image-hero-mobile@2x.png 2x"
               type="image/png"
             />
             <source
-              media="(min-width: 375px)"
-              srcset="
-                ./assets/image-hero-mobile.webp    1x,
-                ./assets/image-hero-mobile@2x.webp 2x
-              "
+              media="(min-resolution: 2dppx)"
+              srcset="./assets/image-hero-mobile@2x.webp 2x"
               type="image/webp"
             />
+            <source
+              srcset="./assets/image-hero-mobile.webp"
+              type="image/webp"
+            />
+            <source srcset="./assets/image-hero-mobile.png" type="image/png" />
             <img
               src="./assets/image-hero-mobile.png"
               alt="woman drinking coffee in front of laptop"
