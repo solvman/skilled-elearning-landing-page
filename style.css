@@ -14,13 +14,13 @@
 
   --gradient-primary: linear-gradient(
     to bottom,
-    hsla(237, 100%, 64.1%, 0.281) 0%,
-    hsla(322, 86.8%, 55.3%, 0.943) 100%
+    hsla(237, 100%, 64.1%, 1) 0%,
+    hsla(322, 86.8%, 55.3%, 1) 100%
   );
   --gradient-secondary: linear-gradient(
     to bottom,
     hsla(13, 100%, 64.1%, 1) 0%,
-    hsla(322, 86.8%, 55.3%, 0.943) 100%
+    hsla(322, 86.8%, 55.3%, 1) 100%
   );
   --gradeint-background: linear-gradient(
     to bottom,
@@ -32,7 +32,7 @@
   /* Shadows */
 
   --color-hsl-shadow: 233, 92%, 29%;
-  --shadow--s: 0 25 50 0 hsla(var(--color-hsl-shadow), 0.0442);
+  --shadow--s: 0 25 50 0 hsla(var(--color-hsl-shadow), 0.0441);
   --shadow--l: 0 34 54 0 hsla(var(--color-hsl-shadow), 0.1589);
 
   /* Font styles  */
@@ -49,6 +49,7 @@
   --heading--l: 2.5rem;
   --heading--m: 2rem;
   --heading--s: 1.5rem;
+  --heading--xs: 1.25rem;
   --body--m: 1.125rem;
   --body--s: 1rem;
 
@@ -82,7 +83,18 @@ img,
 picture,
 svg {
   display: block;
-  max-width: 100%;
+  /* max-width: 100%; */
+}
+
+/* Utility */
+.flex-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 /* Styles */
@@ -96,6 +108,16 @@ body {
   background-color: var(--color-neutral-100);
 }
 
+main section:last-of-type {
+  padding-bottom: 4rem;
+  background-image: var(--gradeint-background);
+}
+
+footer {
+  background-color: var(--color-primary-900);
+  padding: 1.2em 0 1.25em;
+}
+
 a {
   text-decoration: none;
   color: var(--color-secondary-800);
@@ -105,34 +127,36 @@ a {
   cursor: pointer;
 }
 
+a:is(:hover, :focus) {
+  opacity: 0.5;
+}
+
 .button {
   position: relative;
   color: var(--color-neutral-100);
   font-size: var(--body--s);
   font-weight: var(--font-weight--b);
   border: none;
-  border-radius: 1.75rem;
-  padding: 0.615em 1.5em;
-  transition: all 0.4s;
+  border-radius: 100vh;
+  padding: 0.6675em 1.5em;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .button--primary {
   background-color: var(--color-primary-900);
 }
 
-.button--primary:is(:hover, :focus) {
-  background-color: var(--color-primary-600);
-}
-
 .button--secondary {
+  padding: 0.9375em 2.35em;
   background-image: var(--gradient-secondary);
 }
 
-.button--secondary:hover::before,
-.button--secondary:focus::before,
-.button--tertiary:hover::before,
-.button--tertiary:focus::before {
+.button--tertiary {
+  background-image: var(--gradient-primary);
+}
+
+.button:hover::after {
   content: "";
   position: absolute;
   top: 0;
@@ -140,8 +164,69 @@ a {
   bottom: 0;
   right: 0;
   background-color: hsla(0, 0%, 100%, 0.5);
+  overflow: hidden;
 }
 
-.button--tertiary {
-  background-image: var(--gradient-primary);
+.content {
+  min-width: 375px;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.logo {
+  width: 89px;
+}
+
+.hero__title {
+  padding: 0.15em 0;
+  color: var(--color-primary-900);
+  font-size: var(--heading--l);
+  line-height: var(--line-height--l);
+  font-weight: var(--font-weight--xb);
+}
+
+.hero__body {
+  padding: 1.25em 0 1.475em;
+}
+
+.hero__img {
+  margin-top: 1.6125em;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tiles {
+  display: grid;
+  grid-gap: 1em;
+}
+
+.tile {
+  padding: 1.75em;
+  padding-bottom: 1.9em;
+  border-radius: 0.625em;
+  background-color: var(--color-neutral-100);
+  box-shadow: var(--shadow--s);
+}
+
+.tile__heading {
+  color: var(--color-primary-900);
+  font-size: var(--heading--xs);
+  font-weight: var(--font-weight--xb);
+  padding-top: 1.395em;
+}
+
+.tile__heading--cta {
+  color: var(--color-neutral-100);
+  font-size: var(--heading--s);
+  line-height: var(--heading--m);
+  font-weight: var(--font-weight--xb);
+}
+
+.tile__body {
+  padding: 0.975em 0 1.5em;
+}
+
+.tile--cta {
+  padding: 1.55em 1.65em 1.875em;
+  background-image: var(--gradient-secondary);
 }
