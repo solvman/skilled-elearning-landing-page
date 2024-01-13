@@ -9,6 +9,7 @@
   --color-secondary-800: hsla(341, 91.7%, 62.4%, 1);
   --color-secondary-400: hsla(341, 100%, 82.7%, 1);
   --color-neutral-100: hsla(0, 0%, 100%, 1);
+  --color-hsl-shadow: 233, 92%, 29%;
 
   /* Gradients */
 
@@ -22,7 +23,7 @@
     hsla(13, 100%, 64.1%, 1) 0%,
     hsla(322, 86.8%, 55.3%, 1) 100%
   );
-  --gradeint-background: linear-gradient(
+  --gradient-background: linear-gradient(
     to bottom,
     var(--color-neutral-100),
     hsla(234, 100%, 97%, 1)
@@ -31,7 +32,6 @@
 
   /* Shadows */
 
-  --color-hsl-shadow: 233, 92%, 29%;
   --shadow--s: 0 25 50 0 hsla(var(--color-hsl-shadow), 0.0441);
 
   /* Font styles  */
@@ -106,15 +106,18 @@ body {
   line-height: var(--line-height--xs);
   color: var(--color-primary-400);
   background-color: var(--color-neutral-100);
+  /* overflow: hidden; */
 }
 
 header {
+  position: relative;
   padding-top: 1em;
+  overflow: hidden;
 }
 
 main section:last-of-type {
   padding-bottom: 4rem;
-  background-image: var(--gradeint-background);
+  background-image: var(--gradient-background);
 }
 
 footer {
@@ -172,8 +175,9 @@ a:is(:hover, :focus) {
 }
 
 .content {
-  padding: 0 1rem;
-  overflow: hidden;
+  margin-inline: auto;
+  max-width: 1160px;
+  padding: 0 4.3%;
 }
 
 .logo {
@@ -198,6 +202,7 @@ a:is(:hover, :focus) {
   left: 50%;
   transform: translateX(-50%);
 }
+
 .tiles {
   margin-top: -1.4em;
   display: grid;
@@ -206,7 +211,7 @@ a:is(:hover, :focus) {
 
 .tile {
   position: relative;
-  margin-top: 1.5em;
+  margin-top: 32px;
   padding: 1.75em;
   padding-bottom: 1.9em;
   border-radius: 0.625em;
@@ -266,4 +271,46 @@ a:is(:hover, :focus) {
   border: none;
   padding: 1.55em 1.65em 1.875em;
   background-image: var(--gradient-secondary);
+}
+
+/* Media queries */
+
+@media (min-width: 700px) {
+  header {
+    padding-top: 1.5em;
+    padding-bottom: 7em;
+  }
+
+  .hero {
+    padding: 4.5em 0;
+    width: 58%;
+  }
+
+  .hero__body {
+    padding: 1em 0 1.25em;
+  }
+
+  .hero__img {
+    position: absolute;
+    top: -120px;
+    left: auto;
+    right: -300px;
+    transform: none;
+    z-index: -1;
+  }
+
+  .tiles {
+    margin: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tile--cta {
+    margin-top: 32px;
+  }
+}
+
+@media (min-width: 900px) {
+  .tiles {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

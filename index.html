@@ -14,14 +14,12 @@
   </head>
   <body>
     <header>
-      <div class="header content flex-group">
-        <img src="./assets/logo-dark.svg" alt="skilled logo" class="logo" />
-        <button class="button button--primary">Get Started</button>
-      </div>
-    </header>
-    <main>
-      <section>
-        <div class="content hero">
+      <div class="content">
+        <div class="header flex-group">
+          <img src="./assets/logo-dark.svg" alt="skilled logo" class="logo" />
+          <button class="button button--primary">Get Started</button>
+        </div>
+        <div class="hero">
           <h1 class="hero__title">Maximize skill, minimize budget</h1>
           <p class="hero__body">
             Our modern courses across a range of
@@ -31,7 +29,7 @@
           <button class="button button--secondary">Get Started</button>
           <picture>
             <source
-              media="(min-width: 1440px)"
+              media="(min-width: 900px)"
               srcset="
                 ./assets/image-hero-desktop.webp    1x,
                 ./assets/image-hero-desktop@2x.webp 2x
@@ -39,7 +37,7 @@
               type="image/webp"
             />
             <source
-              media="(min-width: 1440px)"
+              media="(min-width: 900px)"
               srcset="
                 ./assets/image-hero-desktop.png    1x,
                 ./assets/image-hero-desktop@2x.png 2x
@@ -47,7 +45,7 @@
               type="image/png"
             />
             <source
-              media="(min-width: 768px)"
+              media="(min-width: 700px)"
               srcset="
                 ./assets/image-hero-tablet.webp    1x,
                 ./assets/image-hero-tablet@2x.webp 2x
@@ -55,7 +53,7 @@
               type="image/webp"
             />
             <source
-              media="(min-width: 768px)"
+              media="(min-width: 700px)"
               srcset="
                 ./assets/image-hero-tablet.png    1x,
                 ./assets/image-hero-tablet@2x.png 2x
@@ -84,53 +82,57 @@
             />
           </picture>
         </div>
-      </section>
+      </div>
+    </header>
+    <main>
       <section>
-        <div class="content tiles">
-          <div class="tile tile--cta">
-            <p class="tile__heading--cta">
-              Check out our most popular courses!
-            </p>
-          </div>
-          <div class="tile" data-type="animation">
-            <p class="tile__heading">Animation</p>
-            <p class="tile__body">
-              Learn the latest animation techniques to create stunning motion
-              design and captivate your audience.
-            </p>
-            <p class="tile__link"><a href="#">Get Started</a></p>
-          </div>
-          <div class="tile" data-type="design">
-            <p class="tile__heading">Design</p>
-            <p class="tile__body">
-              Create beautiful, usable interfaces to help shape the future of
-              how the web looks.
-            </p>
-            <p class="tile__link"><a href="#">Get Started</a></p>
-          </div>
-          <div class="tile" data-type="photography">
-            <p class="tile__heading">Photography</p>
-            <p class="tile__body">
-              Explore critical fundamentals like lighting, composition, and
-              focus to capture exceptional photos.
-            </p>
-            <p class="tile__link"><a href="#">Get Started</a></p>
-          </div>
-          <div class="tile" data-type="crypto">
-            <p class="tile__heading">Crypto</p>
-            <p class="tile__body">
-              All you need to know to get started investing in crypto. Go from
-              beginner to advanced with this 54 hour course.
-            </p>
-            <p class="tile__link"><a href="#">Get Started</a></p>
-          </div>
-          <div class="tile" data-type="business">
-            <p class="tile__heading">Business</p>
-            <p class="tile__body">
-              A step-by-step playbook to help you start, scale, and sustain your
-              business without outside investment.
-            </p>
-            <p class="tile__link"><a href="#">Get Started</a></p>
+        <div class="content">
+          <div class="tiles">
+            <div class="tile tile--cta">
+              <p class="tile__heading--cta">
+                Check out our most popular courses!
+              </p>
+            </div>
+            <div class="tile" data-type="animation">
+              <p class="tile__heading">Animation</p>
+              <p class="tile__body">
+                Learn the latest animation techniques to create stunning motion
+                design and captivate your audience.
+              </p>
+              <p class="tile__link"><a href="#">Get Started</a></p>
+            </div>
+            <div class="tile" data-type="design">
+              <p class="tile__heading">Design</p>
+              <p class="tile__body">
+                Create beautiful, usable interfaces to help shape the future of
+                how the web looks.
+              </p>
+              <p class="tile__link"><a href="#">Get Started</a></p>
+            </div>
+            <div class="tile" data-type="photography">
+              <p class="tile__heading">Photography</p>
+              <p class="tile__body">
+                Explore critical fundamentals like lighting, composition, and
+                focus to capture exceptional photos.
+              </p>
+              <p class="tile__link"><a href="#">Get Started</a></p>
+            </div>
+            <div class="tile" data-type="crypto">
+              <p class="tile__heading">Crypto</p>
+              <p class="tile__body">
+                All you need to know to get started investing in crypto. Go from
+                beginner to advanced with this 54 hour course.
+              </p>
+              <p class="tile__link"><a href="#">Get Started</a></p>
+            </div>
+            <div class="tile" data-type="business">
+              <p class="tile__heading">Business</p>
+              <p class="tile__body">
+                A step-by-step playbook to help you start, scale, and sustain
+                your business without outside investment.
+              </p>
+              <p class="tile__link"><a href="#">Get Started</a></p>
+            </div>
           </div>
         </div>
       </section>
