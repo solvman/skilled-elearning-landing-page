@@ -33,7 +33,6 @@
 
   --color-hsl-shadow: 233, 92%, 29%;
   --shadow--s: 0 25 50 0 hsla(var(--color-hsl-shadow), 0.0441);
-  --shadow--l: 0 34 54 0 hsla(var(--color-hsl-shadow), 0.1589);
 
   /* Font styles  */
 
@@ -227,6 +226,7 @@ a:is(:hover, :focus) {
 }
 
 .tile--cta {
+  border: none;
   padding: 1.55em 1.65em 1.875em;
   background-image: var(--gradient-secondary);
 }
