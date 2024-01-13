@@ -99,6 +99,7 @@ svg {
 /* Styles */
 
 body {
+  min-width: 375px;
   font-family: var(--font-face-default);
   font-weight: var(--font-weight--m);
   font-size: var(--body--s);
@@ -171,7 +172,6 @@ a:is(:hover, :focus) {
 }
 
 .content {
-  min-width: 375px;
   padding: 0 1rem;
   overflow: hidden;
 }
