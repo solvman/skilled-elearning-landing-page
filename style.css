@@ -106,7 +106,7 @@ body {
   line-height: var(--line-height--xs);
   color: var(--color-primary-400);
   background-color: var(--color-neutral-100);
-  /* overflow: hidden; */
+  overflow-x: hidden;
 }
 
 header {
@@ -199,6 +199,8 @@ a:is(:hover, :focus) {
 .hero__img {
   margin-top: 1.6125em;
   position: relative;
+  top: auto;
+  right: auto;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -278,7 +280,6 @@ a:is(:hover, :focus) {
 @media (min-width: 700px) {
   header {
     padding-top: 1.5em;
-    padding-bottom: 7em;
   }
 
   .hero {
@@ -300,7 +301,7 @@ a:is(:hover, :focus) {
   }
 
   .tiles {
-    margin: 0;
+    margin-top: 7em;
     grid-template-columns: repeat(2, 1fr);
   }
 
