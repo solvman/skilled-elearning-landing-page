@@ -223,7 +223,7 @@ a:is(:hover, :focus) {
   flex-direction: column;
 }
 
-.tile > :last-child {
+.tile__link {
   margin-top: auto;
 }
 
@@ -264,6 +264,7 @@ a:is(:hover, :focus) {
 }
 
 .tile__heading--cta {
+  margin: 0;
   color: var(--color-neutral-100);
   font-size: var(--heading--s);
   line-height: var(--heading--m);
